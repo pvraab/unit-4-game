@@ -14,16 +14,20 @@ $(document).ready(function () {
 
     function initCrystals() {
         var crystalOne = document.getElementById("crystalOne");
-        var iVal = Math.floor(Math.random()*10);
+        // var iVal = Math.floor(Math.random() * 10);
+        var iVal = 1;
         $("#crystalOne").val(iVal);
         var crystalTwo = document.getElementById("crystalTwo");
-        var iVal = Math.floor(Math.random()*10);
+        // var iVal = Math.floor(Math.random() * 10);
+        var iVal = 2;
         $("#crystalTwo").val(iVal);
         var crystalThree = document.getElementById("crystalThree");
-        var iVal = Math.floor(Math.random()*10);
+        // var iVal = Math.floor(Math.random() * 10);
+        iVal = 3;
         $("#crystalThree").val(iVal);
         var crystalFour = document.getElementById("crystalFour");
-        var iVal = Math.floor(Math.random()*10);
+        // var iVal = Math.floor(Math.random() * 10);
+        iVal = 4;
         $("#crystalFour").val(iVal);
     }
 
