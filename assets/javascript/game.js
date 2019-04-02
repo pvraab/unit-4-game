@@ -1,59 +1,87 @@
 $(document).ready(function () {
     console.log("Start");
 
+    var wins = 0;
+    var losses = 0;
+    var targetNumber = 0;
+    var totalScore = 0;
+
     initGame();
     initCrystals();
 
     function initGame() {
-        var iVal = Math.floor(Math.random() * 100);
-        console.log(iVal);
+
+        totalScore = 0;
+
+        // Generate a number to which the user will hope to match by clicking on crystals
+        targetNumber = Math.floor(Math.random() * 100);
         var myNumber = document.getElementById("currentNumber");
-        myNumber.textContent = iVal;
+        myNumber.textContent = targetNumber;
         // var myElement = $("#currentNumber");
     };
 
+    // Initialize crystals with a random number from 1 to 10
     function initCrystals() {
+
         var crystalOne = document.getElementById("crystalOne");
-        // var iVal = Math.floor(Math.random() * 10);
-        var iVal = 1;
+        var iVal = Math.floor(Math.random() * 10) + 1;
         $("#crystalOne").val(iVal);
+
         var crystalTwo = document.getElementById("crystalTwo");
-        // var iVal = Math.floor(Math.random() * 10);
-        var iVal = 2;
+        iVal = Math.floor(Math.random() * 10) + 1;
         $("#crystalTwo").val(iVal);
+
         var crystalThree = document.getElementById("crystalThree");
-        // var iVal = Math.floor(Math.random() * 10);
-        iVal = 3;
+        iVal = Math.floor(Math.random() * 10) + 1;
         $("#crystalThree").val(iVal);
+
         var crystalFour = document.getElementById("crystalFour");
-        // var iVal = Math.floor(Math.random() * 10);
-        iVal = 4;
+        iVal = Math.floor(Math.random() * 10) + 1;
         $("#crystalFour").val(iVal);
+
+    }
+
+    function addNumber(iVal) {
+        console.log("Here " + iVal);
+        totalScore += parseInt(iVal);
+        $("#totalScore").text(totalScore);
+        if (totalScore === targetNumber) {
+            wins++;
+            $("#wins").text(wins);
+            initGame();
+            initCrystals();
+        }
+        else if (totalScore > targetNumber) {
+            losses++;
+            $("#losses").text(losses);
+            initGame();
+            initCrystals();
+        }
     }
 
     $("#crystalOne").on("click", function () {
         console.log("in click");
         var iVal = $("#crystalOne").val();
         console.log(iVal);
-
+        addNumber(iVal);
     });
     $("#crystalTwo").on("click", function () {
         console.log("in click");
         var iVal = $("#crystalTwo").val();
         console.log(iVal);
-
+        addNumber(iVal);
     });
     $("#crystalThree").on("click", function () {
         console.log("in click");
         var iVal = $("#crystalThree").val();
         console.log(iVal);
-
+        addNumber(iVal);
     });
     $("#crystalFour").on("click", function () {
         console.log("in click");
         var iVal = $("#crystalFour").val();
         console.log(iVal);
-
+        addNumber(iVal);
     });
 
 });
