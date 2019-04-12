@@ -1,3 +1,8 @@
+// JavaScript for Bootcamp Homework #4
+// Paul Raab
+// Raab Enterprises LLC
+// 4/12/2019
+// ## Easier Assignment - Building a Crystals Collector Game
 $(document).ready(function () {
     console.log("Start");
 
@@ -9,6 +14,7 @@ $(document).ready(function () {
     initGame();
     initCrystals();
 
+    // Initialize new game
     function initGame() {
 
         totalScore = 0;
@@ -41,6 +47,8 @@ $(document).ready(function () {
 
     }
 
+    // Add number to current score and display
+    // Check for win/loss
     function addNumber(iVal) {
         console.log("Here " + iVal);
         totalScore += parseInt(iVal);
@@ -50,8 +58,7 @@ $(document).ready(function () {
             $("#wins").text(wins);
             initGame();
             initCrystals();
-        }
-        else if (totalScore > targetNumber) {
+        } else if (totalScore > targetNumber) {
             losses++;
             $("#losses").text(losses);
             initGame();
@@ -59,6 +66,7 @@ $(document).ready(function () {
         }
     }
 
+    // Handle crystal onclick events
     $("#crystalOne").on("click", function () {
         console.log("in click");
         var iVal = $("#crystalOne").val();
