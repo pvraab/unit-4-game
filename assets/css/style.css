@@ -3,97 +3,41 @@
   font-size: 18px;
   line-height: 34px;
   color: #777777;
+  background-image: url("../images/CrystalCave.jpg");
+  background-size: 100%;
+  background-size: cover;
 }
 
-.navbar {
-  margin-bottom: 0;
-  border-radius: 0;
+#title {
+  background-color: rgb(248, 224, 8);
+  margin: 10px;
 }
 
-/* About me */
-.auth-image {
-  float: left;
-  width: 200px;
-  height: auto;
-  margin-top: 10px;
-  margin-right: 25px;
+#rules {
+  background-color: rgb(233, 232, 196);
+  margin: 10px;
 }
 
-/* Portfolio */
-/* Animation of Jumbotron */
-#jumbo1 {
-  width: 150px;
-  height: 150px;
-  background-color: red;
-  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-  animation-name: example;
-  animation-duration: 4s;
+#currentNumber {
+  background-color: rgb(12, 252, 4);
+  margin: 10px;
 }
 
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes example {
-  from {background-color: red;}
-  to {background-color: yellow;}
+#winsLosses {
+  background-color: aqua;
+  margin: 10px;
 }
 
-/* Standard syntax */
-@keyframes example {
-  from {background-color: red;}
-  to {background-color: yellow;}
-}
-
-/* Image gallery styles to put text on images */
-.figContainer {
-  position: relative;
-  text-align: center;
-}
-
-.figText {
-  position: absolute;
-  bottom: 8px;
-  left: 32px;
-  background: #4aaaa5;
+#scoreHeader {
+  background-color: rgb(5, 146, 16);
   color: white;
+  margin: 10px;
 }
-
-/* contact page */
-#contact-form ul {
-  margin-bottom: 20px;
-}
-
-#contact-form li {
-  margin-bottom: 10px;
-}
-
-label,
-input[type=text],
-input[type=email],
-textarea {
-  display: block;
-  width: 100%;
-}
-
-input[type=text],
-input[type=email],
-textarea {
-  height: 35px;
-  padding: 0 10px;
-  font-size: 14px;
-  border: 1px solid #dddddd;
-}
-
-textarea {
-  height: 200px;
-}
-
-input[type=submit] {
-  padding: 10px 30px;
-  font-size: 18px;
-  color: #ffffff;
-  cursor: pointer;
-  background: #4aaaa5;
-  border: 0 none;
+#totalScore {
+  height: 60px;
+  background-color:  rgb(5, 146, 16);
+  color: white;
+  margin: 10px;
 }
 
 /* Add a gray background color and some padding to the footer */
